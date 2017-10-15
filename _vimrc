@@ -46,6 +46,8 @@ if !exists("syntax_on")
   syntax on
 endif
 
+filetype plugin indent on
+
 " Switch on search pattern highlighting.
 set hlsearch
 
@@ -242,6 +244,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'ajh17/VimCompletesMe'
+Plug 'guns/vim-clojure-static'
 if has("gui_running")
     Plug 'nathanaelkane/vim-indent-guides'
 endif
