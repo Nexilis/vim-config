@@ -4,8 +4,6 @@ set lines=70 columns=130
 set guioptions-=T
 " no menu
 set guioptions-=m
-
-
 " enable 256 colors in terminal version
 set t_Co=256
 " enable 24-bit colors support in terminal version!
@@ -13,13 +11,8 @@ set termguicolors
 " For Neovim 0.1.3 and 0.1.4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set bg=dark
-" colorscheme gruvbox
 colorscheme papercolor
 set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cEASTEUROPE
-" highlight ColorColumn guibg=#ebdbb2 gruvbox compatible color, something is overriding it anyway
-" highlight SpecialKey guifg=#ebdbb2
-
 " Enable line higlight, disable cursor highligh
 set cul
 set nocuc
-

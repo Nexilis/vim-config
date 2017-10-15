@@ -52,9 +52,6 @@ set hlsearch
 " make searches case insensitive
 set ignorecase
 
-" show the editing mode on the last line
-" set showmode
-
 highlight SpecialKey ctermfg=DarkGrey
 set listchars=tab:→\ ,space:·
 set list
@@ -130,25 +127,15 @@ let g:ctrlp_custom_ignore = {
     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
     \ }
 
-" vim-session configuration
-" let g:session_directory='~/.vim/.tmp/sessions'
-" let g:session_autoload='yes' " dont ask about restoring session every time
-" let g:session_autosave='yes' " dont ask about saving sesion, if session name was passed use 'default'
-" let g:session_autosave_periodic=1 " auto save session every minute
-" let g:session_autosave_silent=1 " dont show session saved at command mode
-" set sessionoptions=curdir,winpos,winsize,resize,buffers,help,blank,tabpages,folds
-
 " Show MRU first
 let g:ctrlp_types = ['mru', 'buf', 'fil']
 let g:ctrlp_use_caching=1
 let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_cache_dir=$HOME.'/.vim/.tmp/ctrlp'
 
-" Buffer related configurations
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
 set hidden
-
 " Move to the next buffer
 map <C-Tab> :bnext<CR>
 " Move to the previous buffer
@@ -159,9 +146,6 @@ map <C-x> :bp <BAR> bd #<CR>
 " new buffer
 map <C-n>n :enew<CR>
 
-" Airline configuration
-" let g:airline_theme='gruvbox'
-" let g:airline_theme='papercolor'
 let g:airline_theme='wombat'
 let g:airline#extensions#tabline#enabled=1 "show open buffers in airline
 let g:airline_powerline_fonts=1 " shows special chars like > in airline
@@ -235,19 +219,14 @@ let g:startify_custom_header = [
             \ '\____/ \__,_|_|   \__\___|_|\_\ |___/  \___/ \___/\_|  |_/   \_/ \___|_(_) 15.10.2017',
             \ ]
 
-" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.vim/plugged')
-
-" Make sure you use single quotes
-" Plug 'xolox/vim-misc' " dependecy of vim-session
-" Plug 'xolox/vim-session'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pgdouyon/vim-evanesco' " Automatically clears search highlight
 Plug 'tpope/vim-surround' " :help surround
 " ysiw)                   Hello w*orld! -> Hello (world)!
-Plug 'tpope/vim-commentary' " gc to comment out a line; gcgc to uncomment
+Plug 'tpope/vim-commentary' " gc<action> to comment out a line; gcgc to uncomment
 Plug 'tpope/vim-unimpaired' " NEXT AND PREVIOUS, LINE OPERATIONS, PASTING, ENCODING AND DECODING
 " https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt 
 " FEW UNIMPAIRED TRICKSTERS
@@ -262,23 +241,8 @@ Plug 'mhinz/vim-startify'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
-" Plug 'Valloric/YouCompleteMe'
 Plug 'ajh17/VimCompletesMe'
 if has("gui_running")
     Plug 'nathanaelkane/vim-indent-guides'
 endif
-
-" choco install python2
-" choco install cmake
-" choco install nodejs (for TypeScript and JavaScript support)
-" install Visual Studio 2017 Community with C++ support
-" npm install -g typescript
-" Add to path:
-"   %ProgramFiles%\CMake\bin
-"   %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin
-" cmd.exe cd %userprofile%\.vim\plugged\YouCompleteMe
-" install.py --tern-completer
-
-" Initialize plugin system
 call plug#end()
-
