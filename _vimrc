@@ -143,8 +143,8 @@ map <C-Tab> :bnext<CR>
 " Move to the previous buffer
 map <C-S-Tab> :bprevious<CR>
 " CTRL+F4 or CTRL+x to close buffer
-map <C-F4> :bp <BAR> bd #<CR>
-map <C-x> :bp <BAR> bd #<CR>
+map <C-F4> :bp <BAR> bd! #<CR>
+map <C-x> :bp <BAR> bd! #<CR>
 " new buffer
 map <C-n>n :enew<CR>
 
