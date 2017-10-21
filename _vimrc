@@ -204,6 +204,9 @@ autocmd BufReadPost *
 \ |   exe "normal! g`\""
 \ | endif
 
+" Set C# syntax for csx files
+autocmd BufNewFile,BufRead *.csx set filetype=cs
+
 " VimCompletesMe
 " Use enter for selecting completion entry
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -218,7 +221,7 @@ let g:startify_custom_header = [
             \ '| |_/ / __ _ _ __| |_ ___| | _|/ ___  | | | | | | | .  . | __   _____ _ __ ',
             \ '| ___ \/ _` | ''__| __/ _ \ |/ / / __| | | | | | | | |\/| | \ \ / / _ \ ''__|',
             \ '| |_/ / (_| | |  | ||  __/   <  \__ \ \ \_/ /_| |_| |  | |  \ V /  __/ |_  ',
-            \ '\____/ \__,_|_|   \__\___|_|\_\ |___/  \___/ \___/\_|  |_/   \_/ \___|_(_) 15.10.2017',
+            \ '\____/ \__,_|_|   \__\___|_|\_\ |___/  \___/ \___/\_|  |_/   \_/ \___|_(_) GitHub 2017',
             \ ]
 
 call plug#begin('~/.vim/plugged')
@@ -245,6 +248,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'ajh17/VimCompletesMe'
 Plug 'guns/vim-clojure-static'
+Plug 'OrangeT/vim-csharp'
 if has("gui_running")
     Plug 'nathanaelkane/vim-indent-guides'
 endif
