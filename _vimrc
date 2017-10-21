@@ -224,6 +224,7 @@ let g:startify_custom_header = [
             \ '\____/ \__,_|_|   \__\___|_|\_\ |___/  \___/ \___/\_|  |_/   \_/ \___|_(_) GitHub 2017',
             \ ]
 
+let g:plug_shallow=1 " Download shallow copy of plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -245,7 +246,7 @@ Plug 'tpope/vim-unimpaired' " NEXT AND PREVIOUS, LINE OPERATIONS, PASTING, ENCOD
 Plug 'mhinz/vim-startify'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ajh17/VimCompletesMe'
 Plug 'guns/vim-clojure-static'
 Plug 'OrangeT/vim-csharp'
