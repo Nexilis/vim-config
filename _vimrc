@@ -232,24 +232,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pgdouyon/vim-evanesco' " Automatically clears search highlight
-Plug 'tpope/vim-surround' " :help surround
-" ysiw)                   Hello w*orld! -> Hello (world)!
-Plug 'tpope/vim-commentary' " gc<action> to comment out a line; gcgc to uncomment
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired' " NEXT AND PREVIOUS, LINE OPERATIONS, PASTING, ENCODING AND DECODING
-" https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt 
-" FEW UNIMPAIRED TRICKSTERS
-" [u ]u                   URL encode, decode
-" [y ]y                   C String encode, decode
-" [x ]x                   XML encode, decode
-" [<Space>                Add [count] blank lines above the cursor.
-" ]<Space>                Add [count] blank lines below the cursor.
-" [e                      Exchange the current line with [count] lines above it.
-" ]e                      Exchange the current line with [count] lines below it.
 Plug 'mhinz/vim-startify'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ajh17/VimCompletesMe'
+Plug 'vim-scripts/AutoComplPop'
 Plug 'guns/vim-clojure-static'
 Plug 'OrangeT/vim-csharp'
 if has("gui_running")
