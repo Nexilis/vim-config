@@ -1,6 +1,6 @@
 " WIN: ~/AppData/Local/nvim
 let g:plug_shallow=1 " Download shallow copy of plugins
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'easymotion/vim-easymotion'
