@@ -67,24 +67,24 @@ map <C-p> :browse oldfiles<CR>
 imap <C-Del> <ESC>lvedi " Ctrl+Del in insert mode removes next part of a word
 
 " lines moving based on vim-unimpaired
-nmap <A-j> ]e
-nmap <A-k> [e
-vmap <A-j> ]egv
-vmap <A-k> [egv
+nmap <C-S-j> ]e
+nmap <C-S-k> [e
+vmap <C-S-j> ]egv
+vmap <C-S-k> [egv
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
-map  <A-f> <Plug>(easymotion-bd-f)
-nmap <A-f> <Plug>(easymotion-overwin-f)
-nmap <A-s> <Plug>(easymotion-overwin-f2)
-map <A-l> <Plug>(easymotion-bd-jk)
-nmap <A-l> <Plug>(easymotion-overwin-line)
-map  <A-w> <Plug>(easymotion-bd-w)
-nmap <A-w> <Plug>(easymotion-overwin-w)
+map  <C-S-f> <Plug>(easymotion-bd-f)
+nmap <C-S-f> <Plug>(easymotion-overwin-f)
+nmap <C-S-s> <Plug>(easymotion-overwin-f2)
+map <C-S-l> <Plug>(easymotion-bd-jk)
+nmap <C-S-l> <Plug>(easymotion-overwin-line)
+map  <C-S-w> <Plug>(easymotion-bd-w)
+nmap <C-S-w> <Plug>(easymotion-overwin-w)
 
 map <C-t> :NERDTreeToggle<CR>
-map <A-t> :lcd %:p:h<CR> :NERDTreeFind<CR> " Set working directory to current file dir and sync NERDTree view
-nmap <silent> <leader><space> :nohlsearch<cr> " Clean search (highlight)
+map <C-S-t> :lcd %:p:h<CR> :NERDTreeFind<CR> " Set working directory to current file dir and sync NERDTree view
+nmap <silent> <C-S-x> :nohlsearch<cr> " Clean search (highlight)
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=0
