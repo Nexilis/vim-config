@@ -9,14 +9,15 @@ call plug#begin('~/.config/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired' " NEXT AND PREVIOUS, LINE OPERATIONS, PASTING, ENCODING AND DECODING
 Plug 'jiangmiao/auto-pairs'
 Plug 'guns/vim-clojure-static'
 Plug 'OrangeT/vim-csharp'
-Plug 'wellle/targets.vim' " more options on brackets and commas changes
+Plug 'PProvost/vim-ps1'
+Plug 'drmikehenry/vim-fixkey' " Fix alt key when using Linux
 call plug#end()
 
 set encoding=utf-8
@@ -47,44 +48,44 @@ set relativenumber
 set autoread
 set colorcolumn=120
 set hidden
-set clipboard=unnamed
+set clipboard=unnamedplus
 set background=dark
 colorscheme PaperColor
 
 command! JsonFormat :%!python -mjson.tool
 
-noremap <C-S> :update<CR>
+noremap  <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
-map <C-Tab> :bnext<CR>
-map <S-k> :bnext<CR>
-map <C-S-Tab> :bprevious<CR>
-map <S-j> :bprevious<CR>
-map <C-F4> :bp <BAR> bd! #<CR>
-map <C-x> :bp <BAR> bd! #<CR>
-map <C-n> :enew<CR>
-map <C-p> :browse oldfiles<CR>
+map  <C-Tab> :bnext<CR>
+map  <S-k> :bnext<CR>
+map  <C-S-Tab> :bprevious<CR>
+map  <S-j> :bprevious<CR>
+map  <C-F4> :bp <BAR> bd! #<CR>
+map  <C-x> :bp <BAR> bd! #<CR>
+map  <C-n> :enew<CR>
+map  <C-p> :browse oldfiles<CR>
 imap <C-Del> <ESC>lvedi " Ctrl+Del in insert mode removes next part of a word
 
 " lines moving based on vim-unimpaired
-nmap <C-S-j> ]e
-nmap <C-S-k> [e
-vmap <C-S-j> ]egv
-vmap <C-S-k> [egv
+nmap <M-j> ]e
+nmap <M-k> [e
+vmap <M-j> ]egv
+vmap <M-k> [egv
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
-map  <C-S-f> <Plug>(easymotion-bd-f)
-nmap <C-S-f> <Plug>(easymotion-overwin-f)
-nmap <C-S-s> <Plug>(easymotion-overwin-f2)
-map <C-S-l> <Plug>(easymotion-bd-jk)
-nmap <C-S-l> <Plug>(easymotion-overwin-line)
-map  <C-S-w> <Plug>(easymotion-bd-w)
-nmap <C-S-w> <Plug>(easymotion-overwin-w)
+map  <M-f> <Plug>(easymotion-bd-f)
+nmap <M-f> <Plug>(easymotion-overwin-f)
+nmap <M-s> <Plug>(easymotion-overwin-f2)
+map  <M-l> <Plug>(easymotion-bd-jk)
+nmap <M-l> <Plug>(easymotion-overwin-line)
+map  <M-w> <Plug>(easymotion-bd-w)
+nmap <M-w> <Plug>(easymotion-overwin-w)
 
-map <C-t> :NERDTreeToggle<CR>
-map <C-S-t> :lcd %:p:h<CR> :NERDTreeFind<CR> " Set working directory to current file dir and sync NERDTree view
-nmap <silent> <C-S-x> :nohlsearch<cr> " Clean search (highlight)
+map  <C-t> :NERDTreeToggle<CR>
+map  <M-t> :lcd %:p:h<CR> :NERDTreeFind<CR> " Set working directory to current file dir and sync NERDTree view
+nmap <silent> <M-x> :nohlsearch<cr> " Clean search (highlight)
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=0
