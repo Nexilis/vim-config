@@ -73,6 +73,7 @@ nmap <M-k> [e
 vmap <M-j> ]egv
 vmap <M-k> [egv
 
+map <F4> :q!<CR>
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
 map  <M-f> <Plug>(easymotion-bd-f)
