@@ -7,7 +7,7 @@ set t_Co=256 " enable 256 colors in terminal version
 set termguicolors " enable 24-bit colors support in terminal version!
 set background=dark
 colorscheme papercolor
-set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cEASTEUROPE
+set guifont=DejaVu_Sans_Mono_for_Powerline:h9:cEASTEUROPE
 " Enable line higlight, disable cursor highligh
 set cul
 set nocuc
