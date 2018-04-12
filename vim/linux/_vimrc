@@ -58,9 +58,7 @@ noremap  <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 map  <C-Tab> :bnext<CR>
-map  <S-k> :bnext<CR>
 map  <C-S-Tab> :bprevious<CR>
-map  <S-j> :bprevious<CR>
 map  <C-F4> :bp <BAR> bd! #<CR>
 map  <C-x> :bp <BAR> bd! #<CR>
 map  <C-n> :enew<CR>
