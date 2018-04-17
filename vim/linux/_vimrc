@@ -85,6 +85,7 @@ nmap <M-w> <Plug>(easymotion-overwin-w)
 map  <C-t> :NERDTreeToggle<CR>
 map  <M-t> :lcd %:p:h<CR> :NERDTreeFind<CR> " Set working directory to current file dir and sync NERDTree view
 nmap <silent> <M-x> :nohlsearch<cr> " Clean search (highlight)
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=0
